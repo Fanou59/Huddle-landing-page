@@ -144,23 +144,34 @@ html {
     min-height: 100vh;
 }
 
+header,
+main,
+footer {
+    max-width: 1440px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+
 body {
     background-color: var(--Violet);
     background-image: url(images/bg-desktop.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-    padding: 40px;
+
 }
 
 header {
     display: flex;
-    margin: 64px 0 0 80px;
+    margin-top: 4rem;
+    margin-bottom: 6.5rem;
 
 }
 
 header>img {
-    height: clamp(2rem, 10vw, 3rem)
+    height: clamp(2rem, 10vw, 3rem);
 }
 
 main {
@@ -168,28 +179,28 @@ main {
 }
 
 main>img {
-    margin: 64px 0 0 80px;
+    width: 40%;
+    margin-right: 3.7rem;
 }
 
 
 
 .main-txt {
-
-    margin: 90px 80px 40px 59px;
+    width: 55%;
 }
 
 h1 {
     font-family: "Poppins";
     font-weight: 600;
     font-size: 2.22em;
-    line-height: 60px;
-    margin-bottom: 24px;
+    line-height: 3.3rem;
+    margin-bottom: 1.5rem;
 }
 
 p {
     font-family: "Open Sans";
     line-height: 27px;
-    margin-bottom: 24px;
+    margin-bottom: 1.5rem;
 }
 
 button {
@@ -200,7 +211,7 @@ button {
     font-family: "Poppins";
     font-weight: 400;
     color: var(--Violet);
-    line-height: 27px;
+    line-height: 1.7rem;
 
 }
 
@@ -217,7 +228,7 @@ footer {
 }
 
 svg {
-    margin-left: 16px;
+    margin-left: 1rem;
 
     width: 40px;
     fill: white
@@ -231,7 +242,8 @@ svg:hover {
 
 @media only screen and (max-width:1110px) {
     header {
-        margin: 0 0 70px 0;
+        margin-top: 2.3rem;
+        margin-bottom: 4.3rem;
     }
 
     body {
@@ -242,25 +254,29 @@ svg:hover {
 
     main {
         flex-direction: column;
-
     }
 
-    main>img {
-
-        margin: 0;
-
+    main>img,
+    .main-txt {
+        width: 100%;
     }
 
     .main-txt {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 60px 0 0 0;
+        margin-top: 3.7rem;
     }
 
     footer {
         justify-content: center;
-        margin-top: 64px;
+
+
+        margin-top: 4rem;
+    }
+
+    svg:nth-of-type(1) {
+        margin: 0;
     }
 
     h1,
